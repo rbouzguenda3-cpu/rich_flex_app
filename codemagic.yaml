@@ -4,29 +4,22 @@ workflows:
     max_build_duration: 60
 
     environment:
-      flutter: stable          # Flutter stable
-      xcode: latest            # Dernier Xcode dispo sur Codemagic
+      flutter: stable
+      xcode: latest
       vars:
         APP_BUNDLE_ID: "com.richflex.imrichultra"
 
     scripts:
-      # 1) Récupérer les dépendances Flutter
+      # 1) Récupérer les dépendances
       - name: Get Flutter packages
         script: |
           flutter pub get
 
-      # 2) Build Android .aab (pour Play Store)
-      - name: Build Android app bundle (Play Store)
-        script: |
-          flutter build appbundle --release --no-tree-shake-icons
-
-      # 3) Build iOS .ipa (pour TestFlight / App Store)
-      # Pour l’instant : build simple, la partie signature arrivera après
+      # 2) Build iOS IPA uniquement
       - name: Build iOS IPA
         script: |
           flutter build ipa --release --no-tree-shake-icons
 
     artifacts:
-      # Ce que Codemagic va garder comme résultat de build
-      - build/app/outputs/bundle/release/*.aab
+      # On garde seulement l’IPA
       - build/ios/ipa/*.ipa
