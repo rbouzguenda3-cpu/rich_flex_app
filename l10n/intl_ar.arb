@@ -1,0 +1,22 @@
+{
+  "@@locale": "ar",
+  "appTitle": "ريتش فليكس",
+  "tagline": "أنا ثريّ لدرجة أنني أستطيع شراء تطبيق بلا أي فائدة.",
+  "home_showcase": "العرض",
+  "home_editions": "الإصدارات",
+  "home_certificate": "الشهادة",
+  "home_settings": "الإعدادات",
+  "editions_title": "الإصدارات",
+  "editions_locked": "مقفلة — اشترِ لفتحها",
+  "editions_unlocked": "مفتوحة",
+  "certificate_title": "شهادة الملكية",
+  "certificate_owner": "اسم المالك المستعار",
+  "certificate_serial": "رقم تسلسلي",
+  "certificate_save": "حفظ",
+  "settings_title": "الإعدادات",
+  "settings_language": "اللغة",
+  "settings_english": "الإنجليزية",
+  "settings_arabic": "العربية",
+  "settings_restore": "استعادة المشتريات",
+  "statement": "هذا التطبيق بلا فائدة عملية؛ إنه موجود كتصريح فخم لا أكثر."
+}

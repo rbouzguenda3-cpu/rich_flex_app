@@ -1,0 +1,26 @@
+workflows:
+  im_rich_ultra:
+    name: I'm Rich Ultra CI
+    max_build_duration: 60
+    environment:
+      flutter: stable            # Utilise la dernière version stable de Flutter
+      xcode: latest              # Utilise la dernière version de Xcode dispo sur Codemagic
+      vars:
+        APP_BUNDLE_ID: "com.richflex.imrichultra"
+
+    scripts:
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+
+      - name: Build Android app bundle (Play Store)
+        script: |
+          flutter build appbundle --release --no-tree-shake-icons
+
+      - name: Build iOS IPA (TestFlight)
+        script: |
+          flutter build ipa --release --no-tree-shake-icons
+
+    artifacts:
+      - build/app/outputs/bundle/release/*.aab
+      - build/ios/ipa/*.ipa

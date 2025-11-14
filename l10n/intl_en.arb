@@ -1,0 +1,22 @@
+{
+  "@@locale": "en",
+  "appTitle": "RichFlex",
+  "tagline": "I'm so rich I can buy a useless app.",
+  "home_showcase": "Showcase",
+  "home_editions": "Editions",
+  "home_certificate": "Certificate",
+  "home_settings": "Settings",
+  "editions_title": "Editions",
+  "editions_locked": "Locked — buy to unlock",
+  "editions_unlocked": "Unlocked",
+  "certificate_title": "Certificate",
+  "certificate_owner": "Owner alias",
+  "certificate_serial": "Serial number",
+  "certificate_save": "Save",
+  "settings_title": "Settings",
+  "settings_language": "Language",
+  "settings_english": "English",
+  "settings_arabic": "Arabic",
+  "settings_restore": "Restore purchases",
+  "statement": "This app has no practical utility. It exists purely as a luxury statement."
+}

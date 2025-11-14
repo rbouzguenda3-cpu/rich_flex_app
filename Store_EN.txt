@@ -1,0 +1,12 @@
+Title: RichFlex — Elite Useless App
+Short: A luxury statement. No utility. Just elegance.
+Full:
+RichFlex is intentionally useless. It displays premium gem visuals and a bold line:
+"I'm so rich I can buy a useless app."
+
+• Premium editions (Diamond, Emerald, Sapphire)
+• Ownership certificate (alias + unique serial, on-device)
+• English + Arabic (RTL) support
+• No data collected. No ads.
+
+Important: This app has no practical utility.
