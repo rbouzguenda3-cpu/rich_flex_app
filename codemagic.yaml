@@ -1,6 +1,6 @@
 workflows:
   im_rich_ultra:
-    name: I'm Rich Ultra CI
+    name: I'm Rich Ultra – iOS Build
     max_build_duration: 60
 
     environment:
@@ -9,17 +9,36 @@ workflows:
       vars:
         APP_BUNDLE_ID: "com.richflex.imrichultra"
 
+    # 🔐 Code signing configuration (obligatoire pour ton Personal Account)
+    credentials:
+      app_store_connect:
+        key_id: RB63335GJP
+        issuer_id: abd66fde-2415-4f8d-8dbe-367b892778b3
+        private_key: $APP_STORE_CONNECT_PRIVATE_KEY
+
+    # ⚙️ iOS code signing automatique
+    ios_signing:
+      distribution_type: app_store
+      bundle_identifier: "com.richflex.imrichultra"
+
     scripts:
-      # 1) Récupérer les dépendances
+      # 1) Installer les dépendances Flutter
       - name: Get Flutter packages
         script: |
           flutter pub get
 
-      # 2) Build iOS IPA uniquement
+      # 2) Build IPA Flutter avec signature automatique activée
       - name: Build iOS IPA
         script: |
-          flutter build ipa --release --no-tree-shake-icons
+          flutter build ipa --release
 
+    # 3) Récupérer l’IPA générée
     artifacts:
-      # On garde seulement l’IPA
       - build/ios/ipa/*.ipa
+
+    # 4) (Optionnel) Publier automatiquement sur TestFlight
+    publishing:
+      app_store_connect:
+        apple_id: rbouzguenda3@gmail.com
+        submit_to_testflight: true
+        submit_to_app_store: false
