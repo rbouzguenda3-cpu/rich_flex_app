@@ -33,8 +33,3 @@ flutter:
   assets:
     - assets/images/
   generate: true
-
-flutter_icons:
-  android: true
-  ios: true
-  image_path: "assets/app_icon.png"
