@@ -82,7 +82,7 @@ class _NavBtn extends StatelessWidget {
   final String label;
   final IconData icon;
   final VoidCallback onTap;
-  const _NavBtn({required this.label, required this.icon, required this.onTap, super.key});
+  const _NavBtn({required this.label, required this.icon, required this.onTap});
   @override
   Widget build(BuildContext context) {
     return Expanded(
